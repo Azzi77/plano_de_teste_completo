@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-12T13:47:34.051Z",
+    "end": "2022-09-12T13:47:34.806Z",
+    "duration": 755,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "468b6514-22d9-4dfe-90ae-2af3b2b6e48e",
+      "title": "",
+      "fullFile": "cypress/integration/2.login.spec.js",
+      "file": "cypress/integration/2.login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a5cec5d-5667-4917-bfdf-67503dd441a3",
+          "title": "Casos de teste sobre a rota /login da API Serverest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve realizar login com sucesso",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Deve realizar login com sucesso",
+              "timedOut": null,
+              "duration": 501,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// codigo realizado na call e mentoria\n_serverest.default.buscarUsuarioParaLogin();\ncy.get('@usuarioLogin').then(usuario => {\n  _serverest.default.logar(usuario).then(res => {\n    _validaServerest.default.validarLoginComSucesso(res);\n    cy.contractValidation(res, 'post-login', 200);\n    _serverest.default.salvarBearer(res);\n  });\n});",
+              "err": {},
+              "uuid": "05c61b63-73c0-4758-a0eb-3fca49c5bfbb",
+              "parentUUID": "3a5cec5d-5667-4917-bfdf-67503dd441a3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Não deve realizar login com email invalido ",
+              "fullTitle": "Casos de teste sobre a rota /login da API Serverest Não deve realizar login com email invalido ",
+              "timedOut": null,
+              "duration": 236,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//eu\ncy.logarEmailInvalido().then(res => {\n  cy.contractValidation(res, 'post-login', 400); // aqui tem bug na documentação esta 400, porem retorna um 401\n  _validaServerest.default.validarLoginComEmailsInvalido(res);\n});",
+              "err": {},
+              "uuid": "9700a76a-247e-417d-896e-4ded7cab9ed8",
+              "parentUUID": "3a5cec5d-5667-4917-bfdf-67503dd441a3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "05c61b63-73c0-4758-a0eb-3fca49c5bfbb",
+            "9700a76a-247e-417d-896e-4ded7cab9ed8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 737,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

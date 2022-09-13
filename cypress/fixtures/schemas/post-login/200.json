@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "required": [
+        "message",
+        "authorization"
+    ],
+    "additionalProperties": true
+}

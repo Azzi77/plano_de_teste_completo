@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "required": [
+        "quantidade",
+        "carrinhos"
+    ],
+    "additionalProperties": true
+}

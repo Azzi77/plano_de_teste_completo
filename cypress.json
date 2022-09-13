@@ -1,0 +1,22 @@
+{
+    "$ Shema": "http://on.cypress.io/cypress.Shema.json",
+    "video": false,
+    "viewportWidth": 1600,
+    "viewportHeight": 900,
+    "chromeWebSecurity": false,
+    "numTestskeptInMemory": 5,
+    "scrienshotsFolders": "cypress/screenshots",
+
+   "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        }
+    }
+}
+    

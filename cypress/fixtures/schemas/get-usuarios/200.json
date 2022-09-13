@@ -1,0 +1,8 @@
+{
+        "type": "object",
+    "required": [
+        "quantidade",
+        "usuarios"
+    ],
+    "additionalProperties": true
+}
