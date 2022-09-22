@@ -18,12 +18,5 @@ export default class Factory {
     }
 }
 
-   /* }
-    static gerarCarrinhoAleatorio(){
-        return faker.datatype.array(1)
-
-
-}
-*/
 
 

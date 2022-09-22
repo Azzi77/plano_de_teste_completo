@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 2,
-    "passes": 2,
+    "tests": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-09-12T13:47:55.501Z",
-    "end": "2022-09-12T13:47:56.439Z",
-    "duration": 938,
-    "testsRegistered": 2,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2022-09-13T20:52:17.003Z",
+    "end": "2022-09-13T20:52:18.366Z",
+    "duration": 1363,
+    "testsRegistered": 1,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "866eb434-15da-48da-8e20-322296167753",
+      "uuid": "96139943-d2bc-4d7b-a845-4a5f9da70264",
       "title": "",
       "fullFile": "cypress/integration/5.nao-mapeado.js",
       "file": "cypress/integration/5.nao-mapeado.js",
@@ -27,35 +27,16 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "05c6bd79-8fd7-491b-9b82-7dc8e912f823",
+          "uuid": "8880f35d-8adb-4b6d-bff3-0c729517551a",
           "title": "Casos de teste não mapeado na documentação da API Serverest",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
-          "tests": [
-            {
-              "title": "Não deve realizar login sem email ",
-              "fullTitle": "Casos de teste não mapeado na documentação da API Serverest Não deve realizar login sem email ",
-              "timedOut": null,
-              "duration": 257,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "//eu  //sem documentaçao swagger\ncy.logarSemEmail().then(res => {\n  _validaServerest.default.validarLoginSemEmail(res);\n});",
-              "err": {},
-              "uuid": "92d291c2-3e57-4a89-8c36-4e74a4502d0b",
-              "parentUUID": "05c6bd79-8fd7-491b-9b82-7dc8e912f823",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
+          "tests": [],
           "suites": [
             {
-              "uuid": "187b8525-b7c9-4b33-ac68-6b80fb88751f",
+              "uuid": "7fe41a9c-74a6-412e-b517-21834d72fa70",
               "title": "Logar com sucesso",
               "fullFile": "",
               "file": "",
@@ -66,41 +47,43 @@
                   "title": "Deve tentar cadastrar um produto com valor negativo, sem sucesso,",
                   "fullTitle": "Casos de teste não mapeado na documentação da API Serverest Logar com sucesso Deve tentar cadastrar um produto com valor negativo, sem sucesso,",
                   "timedOut": null,
-                  "duration": 649,
-                  "state": "passed",
-                  "speed": "fast",
-                  "pass": true,
-                  "fail": false,
+                  "duration": 1248,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "//não esta mapeado\n_serverest.default.cadastrarProdutoSemSucesso().then(res => {\n  //retorna 401 undefined\n  _validaServerest.default.validarCadastroDeProdutosSemSucesso(res); //as vezes retorna 403 entao da erro \n  //na validação da mensagem\n});",
-                  "err": {},
-                  "uuid": "6440a13a-1605-4ccc-b412-9504c76a9080",
-                  "parentUUID": "187b8525-b7c9-4b33-ac68-6b80fb88751f",
+                  "err": {
+                    "message": "AssertionError: expected undefined to equal 'preco deve ser um número positivo'",
+                    "estack": "AssertionError: expected undefined to equal 'preco deve ser um número positivo'\n    at Function.validarCadastroDeProdutosSemSucesso (https://serverest.dev/__cypress/tests?p=cypress\\integration\\5.nao-mapeado.js:391:41)\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\5.nao-mapeado.js:195:34)",
+                    "diff": null
+                  },
+                  "uuid": "7a8c5161-9e56-4823-b2cf-4502fc6c59e1",
+                  "parentUUID": "7fe41a9c-74a6-412e-b517-21834d72fa70",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [
-                "6440a13a-1605-4ccc-b412-9504c76a9080"
+              "passes": [],
+              "failures": [
+                "7a8c5161-9e56-4823-b2cf-4502fc6c59e1"
               ],
-              "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 649,
+              "duration": 1248,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             }
           ],
-          "passes": [
-            "92d291c2-3e57-4a89-8c36-4e74a4502d0b"
-          ],
+          "passes": [],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 257,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

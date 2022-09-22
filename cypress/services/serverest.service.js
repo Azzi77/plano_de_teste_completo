@@ -134,7 +134,39 @@ export default class Serverest {
 
        })
    }
+static cadastrarProdutoComSucesso() {
+        let produto = Factory.gerarProduto()
+        return cy.request({
+            method: 'POST',
+            url: URL_PRODUTOS,
+            body: produto,
+            failOnStatusCode: false,
+            auth: {
+                bearer: Cypress.env("bearer")
+
+            }
+        })
+
+    }
+   /* static buscarProdutoParaCarrinho() {
+        let car = Factory.gerarCarrinhoAleatorio()
+        cy.request(URL_CARRINHOS).then(res => {
+            cy.wrap({
+                body: car
+            }).as('produtoCarrinho')
+        
+         
+         })
+        
+          
 }
+}
+*/
+
+
+}
+
+
 
 
 

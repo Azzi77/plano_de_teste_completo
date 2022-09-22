@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-09-12T13:47:40.268Z",
-    "end": "2022-09-12T13:47:41.937Z",
-    "duration": 1669,
+    "start": "2022-09-13T20:51:52.390Z",
+    "end": "2022-09-13T20:51:54.225Z",
+    "duration": 1835,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8eb63be6-7e24-450f-b77a-9009c2e59453",
+      "uuid": "9b32a01f-406f-4817-b502-bd1fd3b3584f",
       "title": "",
       "fullFile": "cypress/integration/3.produtos.spec.js",
       "file": "cypress/integration/3.produtos.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3c6c2264-b313-4f7b-8901-1c84d47f9e59",
+          "uuid": "693a1c5c-ec5a-4a78-b6d5-e40c89f02d5c",
           "title": "Casos de teste sobre a rota /produtos da API Serverest",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deve buscar todos os produtos cadastrados",
               "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Deve buscar todos os produtos cadastrados",
               "timedOut": null,
-              "duration": 266,
+              "duration": 336,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,15 +47,15 @@
               "context": null,
               "code": "_serverest.default.buscarProdutos().then(res => {\n  _validaServerest.default.validarBuscaDeProdutos(res);\n});",
               "err": {},
-              "uuid": "b287cb49-3b59-4437-9da2-a278ee3ff9f9",
-              "parentUUID": "3c6c2264-b313-4f7b-8901-1c84d47f9e59",
+              "uuid": "cf7f5cb8-c828-446c-90c6-c19e6eb25227",
+              "parentUUID": "693a1c5c-ec5a-4a78-b6d5-e40c89f02d5c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "bb29db86-fff1-4ca2-a192-185543180f2f",
+              "uuid": "6e74f2fb-ea9f-4568-9597-bfca1bd06aa0",
               "title": "Logar com sucesso",
               "fullFile": "",
               "file": "",
@@ -66,7 +66,7 @@
                   "title": "Deve postar um novo produto com sucesso",
                   "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve postar um novo produto com sucesso",
                   "timedOut": null,
-                  "duration": 696,
+                  "duration": 758,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -75,8 +75,8 @@
                   "context": null,
                   "code": "_serverest.default.cadastrarProdutoComSucesso().then(res => {\n  cy.contractValidation(res, 'post-produtos', 201);\n  _validaServerest.default.validarCadastroDeProdutosComSucesso(res);\n});",
                   "err": {},
-                  "uuid": "657997dd-f240-46bd-bb22-f4ad93ac7858",
-                  "parentUUID": "bb29db86-fff1-4ca2-a192-185543180f2f",
+                  "uuid": "345331e8-d7ef-4ed6-aa3a-5f1323172b62",
+                  "parentUUID": "6e74f2fb-ea9f-4568-9597-bfca1bd06aa0",
                   "isHook": false,
                   "skipped": false
                 },
@@ -84,7 +84,7 @@
                   "title": "Deve deletar um produto com sucesso",
                   "fullTitle": "Casos de teste sobre a rota /produtos da API Serverest Logar com sucesso Deve deletar um produto com sucesso",
                   "timedOut": null,
-                  "duration": 674,
+                  "duration": 684,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -93,33 +93,33 @@
                   "context": null,
                   "code": "_serverest.default.deletarProdutoCadastrado().then(res => {\n  cy.contractValidation(res, 'delete-produtos-by-id', 200); //ValidaServerest.validarCadastroDeProdutosComSucesso(res)\n  expect(res.body.message).to.be.equal('Registro excluído com sucesso');\n});",
                   "err": {},
-                  "uuid": "4bae9418-c1b9-4ed2-9bdb-41ddd4199631",
-                  "parentUUID": "bb29db86-fff1-4ca2-a192-185543180f2f",
+                  "uuid": "0e29b60f-446d-4c3a-8430-ace91dc6dc1c",
+                  "parentUUID": "6e74f2fb-ea9f-4568-9597-bfca1bd06aa0",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "657997dd-f240-46bd-bb22-f4ad93ac7858",
-                "4bae9418-c1b9-4ed2-9bdb-41ddd4199631"
+                "345331e8-d7ef-4ed6-aa3a-5f1323172b62",
+                "0e29b60f-446d-4c3a-8430-ace91dc6dc1c"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1370,
+              "duration": 1442,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             }
           ],
           "passes": [
-            "b287cb49-3b59-4437-9da2-a278ee3ff9f9"
+            "cf7f5cb8-c828-446c-90c6-c19e6eb25227"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 266,
+          "duration": 336,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
