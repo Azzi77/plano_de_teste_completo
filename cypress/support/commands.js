@@ -49,7 +49,7 @@ Cypress.Commands.add('contractValidation', (res, schema, status) => {
 })
 
 
-Cypress.Commands.add('postarUsuarioSemSucesso', () => {
+Cypress.Commands.add('cadastrarUsuarioSemSucesso', () => {
     return cy.request({
         method: 'POST',
         url: '/usuarios',

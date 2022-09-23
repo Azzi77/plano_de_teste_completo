@@ -35,6 +35,7 @@ export default class ValidaServerest {
                 Cypress.env('idProdutoCadastrado', resposta.body._id)
         }
         static validarCadastroDeProdutosSemSucesso(resposta) {
+                expect(resposta.body.preco).to.be.eq('preco deve ser um número positivo')
                expect(resposta.body.message).to.be.eq('preco deve ser um número positivo')
 
 

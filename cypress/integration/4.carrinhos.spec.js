@@ -40,17 +40,11 @@ context('Logar com sucesso', () => {
       })
 
 })
-    it ('Deve excluir um carrinho com sucesso e retornar produto para estoque ', () => { //Codigo desenvolvido com a ajuda do João/Vinicius
-            Serverest.cancelarCompra().then(res => {
-            cy.contractValidation(res, 'delete-carrinhos-cancelar-compra', 200)   
-            expect(res.body.message).to.be.equal('Não foi encontrado carrinho para esse usuário')
-
-       })
-
-   }) 
-
+    
+it('Deve tentar cadastrar um carrinho com produto duplicado, sem sucesso ', () => {
+    //desenvolver código
    
-
+})
    
 })
 

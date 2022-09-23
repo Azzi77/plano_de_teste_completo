@@ -1,7 +1,0 @@
-{
-    "type": "object",
-    "required": [
-        "message"
-    ],
-    "additionalProperties": true
-}

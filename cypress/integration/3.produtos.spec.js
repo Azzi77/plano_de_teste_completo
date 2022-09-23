@@ -25,7 +25,7 @@ describe('Casos de teste sobre a rota /produtos da API Serverest', () => {
       })
 
 
-      it('Deve postar um novo produto com sucesso', () => {
+      it('Deve cadastrar um novo produto com sucesso', () => {
          Serverest.cadastrarProdutoComSucesso().then(res => {
             cy.contractValidation(res, 'post-produtos', 201)
             ValidaServerest.validarCadastroDeProdutosComSucesso(res)
@@ -34,14 +34,15 @@ describe('Casos de teste sobre a rota /produtos da API Serverest', () => {
 
          })
       })
-
-      it('Deve deletar um produto com sucesso', () => {
-         Serverest.deletarProdutoCadastrado().then(res => {
-            cy.contractValidation(res, 'delete-produtos-by-id', 200)
-            //ValidaServerest.validarCadastroDeProdutosComSucesso(res)
-            expect(res.body.message).to.be.equal('Registro excluído com sucesso')
-         })
-      })
+      it('Deve tentar cadastrar um produto com valor negativo, sem sucesso,', () => { //não esta mapeado
+         Serverest.cadastrarProdutoSemSucesso().then(res => {                     //retorna 401 undefined
+                 ValidaServerest.validarCadastroDeProdutosSemSucesso(res)     //as vezes retorna 403 entao da erro 
+                                                                             //na validação da mensagem
+              })
+     
+           })
+     
+      
    })
 
 })
