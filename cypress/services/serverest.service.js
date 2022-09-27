@@ -25,9 +25,9 @@ export default class Serverest {
                  let usuario = Factory.gerarUsuario()
                  return cy.request({
                  method: 'POST',
-                 url: '/usuarios',
+                 url: '/usuarios',                 
+                 body:usuario,
                  failOnStatusCode: false,
-                 body:usuario
 
    })
 

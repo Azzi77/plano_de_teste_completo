@@ -29,7 +29,7 @@ describe('Casos de teste sobre a rota /login da API Serverest', () => {
      
 })
 
-/* recuperar senha, rota ainda não existe na serverest */
+
 
 
 

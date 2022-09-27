@@ -26,13 +26,13 @@ context('Logar com sucesso', () => {
        })
     })
     it('Deve cadastrar um carrinho com sucesso ', () => {
-           Serverest.cadastrarCarrinhoComSucesso().then(res => {
+            Serverest.cadastrarCarrinhoComSucesso().then(res => {
             cy.contractValidation(res, 'post-carrinhos', 201)
-           expect(res.body.message).to.be.equal('Cadastro realizado com sucesso')
+            expect(res.body.message).to.be.equal('Cadastro realizado com sucesso')
 
          })
     })
-   it ('Deve excluir um carrinho com sucesso e concluir compra ', () => { //Codigo desenvolvido com a ajuda do João/Vinicius
+   it('Deve excluir um carrinho com sucesso e concluir compra ', () => { //Codigo desenvolvido com a ajuda do João/Vinicius
            Serverest.concluirCompra().then(res => {
            cy.contractValidation(res, 'delete-carrinhos-concluir-compra', 200)   
            expect(res.body.message).to.be.equal('Registro excluído com sucesso') //validação da mensagem coloquei direto aqui
@@ -42,14 +42,13 @@ context('Logar com sucesso', () => {
 })
     
 it('Deve tentar cadastrar um carrinho com produto duplicado, sem sucesso ', () => {
-    Serverest.cadastrarCarrinhoComProdutoDuplicado().then(res => {
+        Serverest.cadastrarCarrinhoComProdutoDuplicado().then(res => {
         cy.contractValidation(res, 'post-carrinhos', 400)
         expect(res.body.message).to.be.equal('Não é permitido possuir produto duplicado')
    
-})
+       })
    
-})
-
+   })
    
 })
    

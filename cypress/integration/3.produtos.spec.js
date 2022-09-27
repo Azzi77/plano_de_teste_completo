@@ -8,7 +8,7 @@ import ValidaServerest from '../services/validaServerest.service'
 describe('Casos de teste sobre a rota /produtos da API Serverest', () => {
 
    it('Deve buscar todos os produtos cadastrados', () => {
-      Serverest.buscarProdutos().then(res => {
+         Serverest.buscarProdutos().then(res => {
          ValidaServerest.validarBuscaDeProdutos(res)
       })
    })
@@ -26,7 +26,7 @@ describe('Casos de teste sobre a rota /produtos da API Serverest', () => {
 
 
    it('Deve cadastrar um novo produto com sucesso', () => {
-          Serverest.cadastrarProdutoComSucesso().then(res => {
+           Serverest.cadastrarProdutoComSucesso().then(res => {
             cy.contractValidation(res, 'post-produtos', 201)
             ValidaServerest.validarCadastroDeProdutosComSucesso(res)
 
@@ -62,7 +62,7 @@ describe('Casos de teste sobre a rota /produtos da API Serverest', () => {
 
 })
 it('Deve tentar cadastrar um produto com valor negativo, sem sucesso,', () => { //não esta mapeado
-   Serverest.cadastrarProdutoSemSucesso().then(res => {                     //retorna 401 undefined
+     Serverest.cadastrarProdutoSemSucesso().then(res => {                     //retorna 401 undefined
      ValidaServerest.validarCadastroDeProdutosSemSucesso(res)     //as vezes retorna 403 entao da erro 
                                                                  //na validação da mensagem
       })
@@ -73,7 +73,7 @@ it('Deve tentar cadastrar um produto com valor negativo, sem sucesso,', () => { 
        
     it('Deve editar um produto sem sucesso, rota exclusiva para adiministrador true', () =>{
 
-      // desevolver codigo 
+      // faltou desevolver codigo , não consegui
    })
    
     })
