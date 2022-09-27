@@ -42,14 +42,16 @@ context('Logar com sucesso', () => {
 })
     
 it('Deve tentar cadastrar um carrinho com produto duplicado, sem sucesso ', () => {
-    //desenvolver código
+    Serverest.cadastrarCarrinhoComProdutoDuplicado().then(res => {
+        cy.contractValidation(res, 'post-carrinhos', 400)
+        expect(res.body.message).to.be.equal('Não é permitido possuir produto duplicado')
    
 })
    
 })
 
    
-
+})
    
 
 

@@ -125,17 +125,4 @@ Cypress.Commands.add('logarSemEmail', () => {
     })
 
 })
-     Cypress.Commands.add('cadastrarUsuarioComSucesso', () => {
-           return cy.request({
-           method: 'POST',
-           url: '/usuarios',
-           failOnStatusCode: false,
-           body: {
-            "nome": "Regina da Silva",
-            "email": "regisilva@qa.com.br",
-            "password": "teste",
-            "administrador": "true"
-        }
-    })
-
-})
+   

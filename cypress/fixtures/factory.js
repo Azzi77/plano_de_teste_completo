@@ -16,7 +16,14 @@ export default class Factory {
         return faker.datatype.number(5)
 
     }
+
+    static gerarUsuario() {
+        return {
+            "nome": faker.name.fullName(),
+            "email": faker.internet.email(),
+            "password": faker.internet.password(),
+            "administrador": "true"
 }
+    }
 
-
-
+}

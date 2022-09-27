@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "required": [
+        "nome",
+        "preco",
+        "descricao",
+        "quantidade",
+        "_id"
+    ],
+    "additionalProperties": true
+}

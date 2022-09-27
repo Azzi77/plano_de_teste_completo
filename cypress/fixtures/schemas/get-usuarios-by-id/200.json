@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "required": [
+        "nome",
+        "email",
+        "password",
+        "administrador",
+        "_id"
+    ],
+    "additionalProperties": true
+}
