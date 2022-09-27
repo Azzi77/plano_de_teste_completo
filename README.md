@@ -10,64 +10,64 @@ automação para as rotas prioritárias da API.
 
 ## Pré requisitos
 Antes de instalar as dependências no projeto, você precisa já ter instalado na sua máquina:
-- Node.Js:
-- Uma ide da sua preferencia, nesse projeto usei Vscode, vc pode instalar cricando aqui
+- Node.Js
+- Visual Studio Code (IDE), ou outra IDE de sua preferencia
 - Cypress
 
 ## Instalação
 
  - Para instalação do Cypress vamos usar o comando npm install 
- - Node.Js download aqui
- - Vscode download aqui
+ - Node.Js, caso não tenha pode realizar o download [Aqui](https://nodejs.org/en/)
+ - Visual Studio Code (IDE), caso não tenha pode realizar o dowload [Aqui](https://code.visualstudio.com/download)
+ 
 
 ## Execução dos testes
-Explicação de como executar os testes automatizados
+Os teste automatizados serão executados pelo Cypress através do comamdo
+- npm run test
 
-## Break down into end to end tests
-Explicação sobre os tipos de testes realizados e como consultar os reports gerados
-Aqui pode ser informada uma pasta para acesso dos reports ou algum comando necessário
 
 ## Deployment
 Informar aqui como realizar os PR's para atualização do projeto:
-git checkout -b "nome_da_branch"
-git commit -m "mensagem do commit"
-git push origin nome_da_branch:nome_da_branch
+- git checkout -b "nome_da_branch"
+- git commit -m "mensagem do commit"
+- git push origin nome_da_branch:nome_da_branch
 
-git init para criar o repositorio
-git add (nome do arquivo)
-git commit -m “mensagem do commit” (exemplo “primeiro commit”
-git commit -M main (para renomear de master para main)
-git remote add origin (colar endereço do repositorio do GitHub
+- git init para criar o repositorio
+- git add (nome do arquivo)
+- git commit -m “mensagem do commit” (exemplo “primeiro commit”
+- git commit -M main (para renomear de master para main)
+- git remote add origin (colar endereço do repositorio do GitHub
 
-## Técnologias utilizadas
-Aqui são listadas as técnologias utilizadas no projeto
-•	Cypress - The test framework used
-•	Node.Js 
-•	
-•	
-•	Visual Studio Code (ID
+## Técnologias e ferramentas utilizadas
+Aqui são listadas as técnologias e ferramentas utilizadas no projeto
+
+- Cypress: (framework para automação)
+- Visual Studio Code (IDE para criação do codigo)
+- GitHub (para versionamento do código de automação)
+- Node. Js (para desenvolvimento de código javascript)
+- Mochosome (para reports)
+- Pacote office (para elaboração da documentação dos testes)
+- Microsoft Teams (para comunicação com a equipe)
+- Postman (ferramenta para alguns testes manuais
+- Xmind; (para criação do mapa mental)
 
 ## Contribuição
+Esse repositório foi criado para fins de estudos.
 
-Nesta sessão são descritas as políticas para novas contribuições
-e os valores analisados para aceitação das mesmas
 
 ## Autores
-- Autor Aqui - Entrega inicial - Link para a raiz do projeto no git
-- https://github.com/Azzi77/LogicalForest_Regina_Azzi_Compass
-- Agilisei
-Talk about
-	
-Importante listar os contribuintes que participaram deste projeto
+- https://github.com/Azzi77/sprint6-trilha-cypress-final
+
+
 
 ## License
-
-Aqui devem vir as informações de licenciamento do projeto
+https://github.com/Azzi77/sprint6-trilha-cypress-final/blob/main/LICENSE
 
 ## Créditos
-- João
-- Vinicius
-- API Serverest
+- João Ricardo Soares da Silva e Vinicius Alexandre P de Lima pela ajuda no desenvolvimento dos códigos
+- API Serverest https://serverest.dev/
+- Talkin About https://talkingabouttesting.com/
+- Agilizei https://agilizei.com/
 - Equipe de bolsa Compass.uol
 	
 
