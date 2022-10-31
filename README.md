@@ -48,7 +48,7 @@ Aqui são listadas as técnologias e ferramentas utilizadas no projeto
 - Mochosome (para reports)
 - Pacote office (para elaboração da documentação dos testes)
 - Microsoft Teams (para comunicação com a equipe)
-- Postman (ferramenta para alguns testes manuais
+- Postman (ferramenta para alguns testes manuais)
 - Xmind; (para criação do mapa mental)
 
 ## Contribuição
