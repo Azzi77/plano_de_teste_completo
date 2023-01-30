@@ -163,6 +163,24 @@ export default class Serverest {
 
 
   }    
+  static buscarProdutoParaCarrinhos() {
+    cy.request(URL_PRODUTOS).then(res =>{
+        let qtdprodutos = res.body.quantidade -1 
+        let inteiro = Factory.gerarInteiroAleatorio(qtdprodutos)
+
+        cy.wrap({
+            idProduto: res.body.produtos[inteiro].id,
+            quantidade: Factory.gerarInteiroAleatorio(5)
+
+    }).as('produtosParaCarrinho')
+
+
+        })
+        
+        
+
+
+  }
    
           static concluirCompra() {
                  return  cy.request({
@@ -179,15 +197,10 @@ export default class Serverest {
                 method: 'POST',
                 url: URL_CARRINHOS,
                 body: {
-                "produtos": [
-                                    {
-                    "idProduto": "K6leHdftCeOJj8BJ",
-                    "quantidade": 5
-                  }
-                ]
+                produtos: [produto]
+               
         },
-              
-            
+                       
                failOnStatusCode: false,
                auth: {
                 bearer: Cypress.env("bearer")
@@ -215,17 +228,11 @@ export default class Serverest {
               method: 'POST',
               url: URL_CARRINHOS,
               body: {
-              "produtos": [
-                              {
-              "idProduto": "K6leHdftCeOJj8BJ",
-              "quantidade": 5
-            },
-            {
-                "idProduto": "K6leHdftCeOJj8BJ",
-                "quantidade": 5
-              }
-          ]
-  }, 
+              produtos:[
+                produto,                         
+                produto
+            ]  
+  },
       
             failOnStatusCode: false,
             auth: {

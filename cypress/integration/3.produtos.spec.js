@@ -73,7 +73,7 @@ it('Deve tentar cadastrar um produto com valor negativo, sem sucesso,', () => { 
        
     it('Deve editar um produto sem sucesso, rota exclusiva para adiministrador true', () =>{
 
-      // faltou desevolver codigo , não consegui
+      // faltou desevolver codigo , não consegui por falta de tempo
    })
    
     })
